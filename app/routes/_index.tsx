@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Button } from "~/components/ui/button"
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,33 +10,10 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+    <div className="px-2 flex flex-col gap-2 w-[100px]">
+      <Button>Click me</Button>
+      <Button variant={'secondary'}>Click me</Button>
+      <Button variant={'outline'}>Click me</Button>
     </div>
   );
 }
